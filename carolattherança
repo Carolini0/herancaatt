@@ -1,0 +1,26 @@
+class veiculo:
+    def __init__(self, marca , modelo ):
+        self.marca = marca 
+        self.modelo = modelo
+
+class carro (veiculo):
+    def __init__(self, marca , modelo):
+        super().__init__(marca,modelo)
+
+    def abrir_porta(self):
+        print("Portas abertas")
+
+class moto(veiculo):
+    def __init__(self,marca,modelo):
+        super().__init__(marca,modelo)
+
+    def empinar(self):
+        print("Moto Empinada!")
+
+carro = carro("Ford", "Focus")
+print(f"Carro: {carro.marca} {carro.modelo}")
+carro.abrir_porta()
+
+moto = moto("Honda", "CBR")
+print(f"Moto: {moto.marca} {moto.modelo}")
+moto.empinar()
